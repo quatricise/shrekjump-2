@@ -6,7 +6,7 @@ let data = {
     },
     life: 3,
     lifeMax: 3,
-    speed: 260,
+    speed: 220,
     maxJumpVel: 300,
     sprite: {
       default: images.shrek.default

@@ -230,7 +230,7 @@ function randomizeContentPosition() {
   return pos
 }
 
-let ad_timer = 300
+let ad_timer = 15000
 let content_removal_period = 20000
 let content_removal_id = setInterval(()=> {removeContent()}, content_removal_period)
 

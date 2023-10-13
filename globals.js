@@ -11,7 +11,7 @@ let globals = {
   explosionFalloff: 2, 
   explosionXFalloff: 0.99,
   /** range on x axis, signifies the max offset from center */
-  maxPlatformSpread: 200,
+  maxPlatformSpread: 160,
   /** number of pixels that are used to determine whether shrek has landed on a platform */
   landingBufferHeight: 7, 
   scoreBonusMinHeight: 200,

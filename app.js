@@ -5,8 +5,8 @@ const canvas = Q('#canvas')
 const ctx = canvas.getContext('2d')
 
 
-let cw = 360
-let ch = window.innerHeight - 270
+let cw = 380
+let ch = window.innerHeight - 250
 canvas.width = cw
 canvas.height = ch
 window.onresize = () => {

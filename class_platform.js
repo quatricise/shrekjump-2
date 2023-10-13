@@ -44,10 +44,8 @@ class PlatformBasic {
     this.updateSpikePos()
   }
   updateSpikePos() {
-    
     if(this.spike.detached) this.spike.pos.y += globals.scrollspeed * 2 * dt
     else {this.spike.pos.x = this.pos.x ;this.spike.pos.y = this.pos.y}
-    
   }
   draw() {
     if(this.spike.exists) {

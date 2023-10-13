@@ -1,0 +1,219 @@
+@font-face {
+  font-family: "shrek";
+  src: url(fonts/shrek.ttf);
+}
+@font-face {
+  font-family: "montserrat";
+  src: url(fonts/Montserrat-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: "montserrat";
+  src: url(fonts/Montserrat-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "montserrat";
+  src: url(fonts/Montserrat-Regular.ttf);
+  font-weight: 400;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url(assets/background_body.jfif);
+  background-repeat: no-repeat;
+  background-position: top;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none!important;
+}
+
+#canvas {
+  position: absolute;
+}
+
+.canvas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 50px;
+  z-index: 100;
+}
+
+#start-menu {
+  position: relative;
+  top: 50px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.shrek-button {
+  position: relative;
+  z-index: 2;
+}
+
+button {
+  font-family: "shrek";
+  position: relative;
+  font-size: 32px;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid rgb(31, 133, 0);
+  padding: 10px 12px;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  transition: all 0.07s ease-in-out;
+  z-index: 3;
+  overflow: hidden;
+}
+.button {
+  transition: all 0.07s ease-in;
+}
+.button:hover {
+  transform: rotate(12deg)
+}
+.button:hover button {
+  background-color: rgb(25, 160, 25);
+}
+
+.button:hover .shrek-peek {
+  transform: translateY(-50px)
+}
+
+.shrek-peek {
+  width: 115px;
+  height: 60px;
+  background-image: url(assets/shrek_peek.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 12px;
+  transform: translateY(-12px);
+  transition: all 0.15s linear;
+}
+.controls-container, .tips-container {
+  z-index: 10;
+  position: absolute;
+  border: 2px solid rgb(0, 80, 0);
+  border-radius: 10px;
+  padding: 10px;
+  background-color: green;
+  max-width: 50vw;
+}
+
+.control-label, .control-value, .tip-text {
+  font-family: "montserrat";
+  color: white;
+  padding: 10px;
+  min-width: 150px;
+  transition: all 0.15s linear;
+}
+
+.control-label {
+  font-weight: 600;
+}
+
+.control-value:hover {
+  transform: scale(1.1);
+  background-color: rgb(25, 160, 25);
+}
+
+.control-row, .tip-row {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  background-color: transparent;
+}
+
+.tip-text::before {
+  content: "•";
+}
+
+.heading {
+  font-family: "montserrat";
+  color: white;
+  font-size: 32px;
+  padding: 0 0 5px 10px;
+  font-weight: 600;
+}
+
+
+.patch-info-container {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  max-width: 350px;
+}
+
+.patch-info {
+  font-family: "montserrat";
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  max-width: 300px;
+  transition: all 0.12s linear;
+}
+
+.patch-info:hover {
+  transform: rotate(12deg)
+}
+
+.big-title {
+  position: absolute;
+  top: -180px;
+  max-width: 300px;
+  transform: rotate(0deg);
+}
+
+.big-title > img {
+  position: relative;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 9;
+}
+
+#shrek-tv {
+  position: absolute;
+  left: calc(50vw - 320px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  z-index: 1000000;
+  pointer-events: none;
+  /* filter: opacity(0.2); */
+}
+#shrek-tv img {
+  width: 640px;
+  left: 0;
+}
+#shrek-tv-top {
+}
+#shrek-tv-bottom {
+}
+#shrek-tv-middle {
+  flex-grow: 1;
+  height: 100%;
+}

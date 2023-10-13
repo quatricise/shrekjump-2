@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-store"/>
+  <meta http-equiv="expires" content="-1" />
+  <title>Shrekjump</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="shrek-tv">
+    <img src="assets/shrek_tv_top.png" id="shrek-tv-top" alt="">
+    <img src="assets/shrek_tv_middle.png" id="shrek-tv-middle" alt="">
+    <img src="assets/shrek_tv_bottom.png" id="shrek-tv-bottom" alt="">
+  </div>
+  <div class="canvas-container">
+    <canvas id="canvas" width="100" height="100" onclick="hideControls(); hideTips();"></canvas>
+    <div id="start-menu" class="buttons">
+    <div class="big-title"><img src="assets/title.png" alt="Title"></div>
+
+      <div class="shrek-button button">
+        <div class="shrek-peek"></div>
+        <button id="start" onclick="init();toggleStartMenu()">Start</button>
+      </div>
+      <div class="controls-button button">
+        <button id="show-controls" onclick="toggleControls()">Controls</button>
+      </div>
+      <div class="tips-button button">
+        <button id="show-tips" onclick="toggleTips()">Tips</button>
+      </div>
+      <div class="patch-info-container">
+        <div class="patch-info"></div>
+      </div>
+    
+    </div>
+    <div class="controls-container hidden">
+      <div class="controls">
+
+      </div>
+    </div>
+    <div class="tips-container hidden" onclick="toggleTips()" title="Close menu by clicking">
+      <div class="tips">
+        <div class="tip-row">
+          <div class="heading">Tips & Tricks</div>
+        </div>
+        <div class="tip-row">
+          <div class="tip-text">
+            Each destroyed platform will hamper the game scroll speed, the more you destroy, the slower you go crazy.
+          </div>
+        </div>
+        <div class="tip-row">
+          <div class="tip-text">
+            Collecting <u>most</u> pickups will increase your score.
+          </div>
+        </div>
+        <div class="tip-row">
+          <div class="tip-text">
+            Press the Down arrow key to <b>fall faster</b>. You can also hold it while jumping to instantly begin
+            quick-falling once your jump is over.
+          </div>
+        </div>
+        <div class="tip-row">
+          <div class="tip-text">
+           Losing hearts intentionally can increase your score as it leads to spawning more hearts. It makes the game
+           more risky however, so be careful.
+          </div>
+        </div>
+        <div class="tip-row">
+          <div class="tip-text">
+           Watch out for golden hearts, they permanently increase your heart capacity.
+          </div>
+        </div>
+        <div class="tip-row">
+          <div class="tip-text">
+            Press <b>[E]</b> to eat, if you have collected any onions.
+            The onion will temporarily hyper-charge your stamina gain, use it at the right moment.
+          </div>
+        </div>
+        <div class="tip-row">
+          <div class="tip-text">
+            Press <b>[Left Shift]</b> to dash. Dashing gives you momentary velocity boost in the direction you're facing.
+            But don't forget you have to look left or right, otherwise the dash won't work.
+          </div>
+        </div>
+        <div class="tip-row">
+          <div class="tip-text">
+            If you're glowing blue, it means your dash is ready.
+          </div>
+        </div>
+        <div class="tip-row">
+          <div class="tip-text">
+            Jumping several times on a platform will release the spike, giving you extra score.
+          </div>
+        </div>
+        <div class="tip-row">
+          <div class="tip-text">
+            Sometimes shrek will glitch and fall through a platform. This is not intentional, I'm very sorry.
+          </div>
+        </div>
+        <div class="tip-row">
+          <div class="tip-text">
+           Don't click the ads....
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="dependencies/lodash.js"></script>
+
+  <script src="utility.js"></script>
+  <script src="binds.js"></script>
+  <script src="assets.js"></script>
+  <script src="globals.js"></script>
+  <script src="class_shrek.js"></script>
+  <script src="class_platform.js"></script>
+  <script src="class_spike.js"></script>
+  <script src="class_umbrella.js"></script>
+  <script src="class_onion.js"></script>
+  <script src="class_cloud.js"></script>
+  <script src="class_heart.js"></script>
+  <script src="class_npc.js"></script>
+  <script src="class_heart_container.js"></script>
+  <script src="class_overlays.js"></script>
+  <script src="class_boulder.js"></script>
+  <script src="class_explosion.js"></script>
+  <script src="class_platform_spawner.js"></script>
+  <script src="sfx.js"></script>
+  <script src="data.js"></script>
+  <script src="collision.js"></script>
+  <script src="ui.js"></script>
+  <script src="stage.js"></script>
+  <script src="adverts.js"></script>
+  <script src="init.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

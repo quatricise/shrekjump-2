@@ -1,0 +1,16 @@
+const binds = {
+  left: "ArrowLeft",
+  right: "ArrowRight",
+  up: "ArrowUp",
+  down: "ArrowDown",
+  quickfall: "ArrowDown",
+  jump: "Space",
+  dash: "ShiftLeft",
+  hitbox: "Digit1",
+  sprite: "Digit2",
+  eat: "KeyE",
+  restart: "KeyR",
+  pause: "KeyP",
+  viewControls: "KeyC",
+  returnToTitle: "Escape",
+}

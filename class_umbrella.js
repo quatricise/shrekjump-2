@@ -27,6 +27,8 @@ class Umbrella {
     globals.score++
     new Overlay("score_plus", undefined, player)
     this.destroy()
+
+    new SFX("shrek_yes")
   }
   destroy() {
     gameObjects = gameObjects.filter(obj => obj != this)

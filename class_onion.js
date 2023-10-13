@@ -20,7 +20,9 @@ class Onion {
   }
   pickup() {
     player.onions++
-    new SFX("shrek_getonion")
+    let rand = Math.ceil(Math.random() * 2)
+    new SFX("shrek_getonion" + rand)
+    
     new Overlay("score_plus", undefined, player)
     this.destroy()
   }

@@ -31,6 +31,7 @@ class Cloud {
       player.clouded = true
       player.timers.clouded = data.cloud.duration
       this.destroy()
+      new SFX("shrek_no")
     }
   }
   destroy() {

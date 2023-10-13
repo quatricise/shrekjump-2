@@ -25,6 +25,8 @@ class HeartContainer {
       player.mods.umbrella = false
     },data.umbrella.duration)
     this.destroy()
+
+    new SFX("shrek_yes")
   }
   destroy() {
     gameObjects = gameObjects.filter(obj => obj != this)

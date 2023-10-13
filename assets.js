@@ -90,5 +90,18 @@ let images = {
 
 let sounds = {
   shrek_eat: "sound/onion.ogg",
-  shrek_getonion: "sound/hahaha.wav",
+  shrek_damage1: "sound/ugh.ogg",
+  shrek_damage2: "sound/what.ogg",
+  shrek_damage3: "sound/what.ogg",
+  shrek_getonion1: "sound/hahaha.wav",
+  shrek_getonion2: "sound/onion2.wav",
+  shrek_getonion3: "sound/onion3.wav",
+  shrek_step1: "sound/step1.ogg",
+  shrek_step2: "sound/step2.ogg",
+  shrek_step3: "sound/step3.ogg",
+  shrek_jump1: "sound/ahh.ogg",
+  shrek_jump2: "sound/ahh2.ogg",
+  shrek_bye: "sound/byebye.ogg",
+  shrek_yes: "sound/yes.ogg",
+  shrek_no: "sound/no.ogg",
 }

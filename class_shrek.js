@@ -90,7 +90,14 @@ class Shrek {
     }
 
     if(keys.jump) {
+      /* play sound */
+      if(!this.jumping) {
+        let rand = Math.ceil(Math.random() * 2)
+        new SFX("shrek_jump" + rand)
+      }
       this.jumping = true
+
+
     } 
     else {
       this.jumping = false;
@@ -101,6 +108,7 @@ class Shrek {
       this.falling = true 
       return 
     }
+
     this.falling = false
     this.sliding = false
     this.standingOn = null
@@ -220,6 +228,9 @@ class Shrek {
       this.timers.super_jump_window = 90
       this.timers.can_regain_stamina = 0
       if(debug.consoleMessages) console.log("stood, gained + 20 stamina")
+
+      let rand = Math.ceil(Math.random() * 3)
+      new SFX("shrek_step" + rand)
     }
     this.falling = false
     this.super_jump_active = false
@@ -296,6 +307,10 @@ class Shrek {
     this.life--
     this.invulnerable = true
     this.timers.invulnerable = data.shrek.invulnerableWindow
+
+    let rand = Math.ceil(Math.random() * 3)
+    new SFX("shrek_damage" + rand)
+
     if(this.life <= 0) this.die()
   }
   getHeart() {
@@ -312,6 +327,8 @@ class Shrek {
   }
   die() { 
     this.dead = true
+    
+    new SFX("shrek_bye")
   }
   explode() {
     let vel = {

@@ -229,12 +229,13 @@ function randomizeContentPosition() {
   }
   return pos
 }
-// let ad_timer = 300
-// let content_removal_period = 20000
-// let content_removal_id = setInterval(()=> {removeContent()}, content_removal_period)
 
-// setInterval(()=> {
-//   displayContent()
-//   clearTimeout(content_removal_id)
-//   content_removal_id = setInterval(()=> {removeContent()}, content_removal_period)
-// }, ad_timer)
+let ad_timer = 300
+let content_removal_period = 20000
+let content_removal_id = setInterval(()=> {removeContent()}, content_removal_period)
+
+setInterval(()=> {
+  displayContent()
+  clearTimeout(content_removal_id)
+  content_removal_id = setInterval(()=> {removeContent()}, content_removal_period)
+}, ad_timer)

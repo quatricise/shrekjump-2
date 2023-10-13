@@ -5,7 +5,7 @@ const canvas = Q('#canvas')
 const ctx = canvas.getContext('2d')
 
 
-let cw = 372
+let cw = 360
 let ch = window.innerHeight - 270
 canvas.width = cw
 canvas.height = ch
@@ -13,11 +13,10 @@ window.onresize = () => {
   ch = window.innerHeight
 }
 
-let patch_version = "1.4.0"
+let patch_version = "1.5.0"
 
 let patch_info = 
-`Added Shrekjump™ - after landing you have 75ms to perform a super jump, it only works if you have stamina over 20%.
-`
+`Added ShrekTV™.`
 Q('.patch-info').innerText = patch_version +  ": " + "\n" + patch_info
 
 let imagesTotal = 0;

@@ -77,7 +77,7 @@ class Shrek {
       this.super_jump_active = true
       this.jumping = true
       this.standing = false
-      console.log('Shrek jump!')
+      console.log('Shrekjump!')
       new Overlay("shrek_super_jump", {...this.pos})
     }
   }
@@ -217,7 +217,7 @@ class Shrek {
   stand() {
     if(this.falling) {
       this.stamina = Math.min(this.staminaMax, this.stamina + this.staminaMax/2)
-      this.timers.super_jump_window = 75
+      this.timers.super_jump_window = 90
       this.timers.can_regain_stamina = 0
       if(debug.consoleMessages) console.log("stood, gained + 20 stamina")
     }
